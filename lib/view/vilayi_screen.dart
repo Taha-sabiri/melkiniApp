@@ -3,6 +3,7 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:melkino/constant/color.dart';
 import 'package:melkino/constant/func.dart';
+import 'package:melkino/view/image_screen.dart';
 
 class Villayi extends StatefulWidget {
   const Villayi({super.key});
@@ -128,47 +129,96 @@ class _VillayiState extends State<Villayi> {
                       child: Column(
                         children: [
                           SizedboxH(20),
-                          SizedBox(
-                            width: 343,
-                            child: TextFormField(
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Color.fromRGBO(98, 98, 98, 1),
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Kalame',
-                                fontWeight: FontWeight.w500,
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 165,
+                                child: TextFormField(
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Color.fromRGBO(98, 98, 98, 1),
+                                    decoration: TextDecoration.none,
+                                    fontFamily: 'Kalame',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  decoration: InputDecoration(
+                                      floatingLabelBehavior:
+                                          FloatingLabelBehavior.always,
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                        color: Color.fromRGBO(21, 70, 248, 1),
+                                      )),
+                                      border: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              width: 1,
+                                              color: Color.fromRGBO(
+                                                  0, 0, 0, 0.26))),
+                                      hintText: " ۳۵۳ میلیون",
+                                      hintStyle: TextStyle(
+                                        fontSize: 15,
+                                        decoration: TextDecoration.none,
+                                        fontFamily: 'Kalame',
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      labelText: "قیمت پیش",
+                                      labelStyle: TextStyle(
+                                        fontSize: 15,
+                                        color: MyColor.gray,
+                                        decoration: TextDecoration.none,
+                                        fontFamily: 'Kalame',
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      floatingLabelAlignment:
+                                          FloatingLabelAlignment.start),
+                                ),
                               ),
-                              decoration: InputDecoration(
-                                  floatingLabelBehavior:
-                                      FloatingLabelBehavior.always,
-                                  focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                    color: Color.fromRGBO(21, 70, 248, 1),
-                                  )),
-                                  border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          width: 1,
-                                          color:
-                                              Color.fromRGBO(0, 0, 0, 0.26))),
-                                  hintText: " ۳۵۳ میلیون",
-                                  hintStyle: TextStyle(
+                              SizedBox(
+                                width: 5,
+                              ),
+                              SizedBox(
+                                width: 165,
+                                child: TextFormField(
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
                                     fontSize: 15,
+                                    color: Color.fromRGBO(98, 98, 98, 1),
                                     decoration: TextDecoration.none,
                                     fontFamily: 'Kalame',
                                     fontWeight: FontWeight.w500,
                                   ),
-                                  labelText: "قیمت اجاره",
-                                  labelStyle: TextStyle(
-                                    fontSize: 15,
-                                    color: MyColor.gray,
-                                    decoration: TextDecoration.none,
-                                    fontFamily: 'Kalame',
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  floatingLabelAlignment:
-                                      FloatingLabelAlignment.start),
-                            ),
+                                  decoration: InputDecoration(
+                                      floatingLabelBehavior:
+                                          FloatingLabelBehavior.always,
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                        color: Color.fromRGBO(21, 70, 248, 1),
+                                      )),
+                                      border: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              width: 1,
+                                              color: Color.fromRGBO(
+                                                  0, 0, 0, 0.26))),
+                                      hintText: " ۳۵۳ میلیون",
+                                      hintStyle: TextStyle(
+                                        fontSize: 15,
+                                        decoration: TextDecoration.none,
+                                        fontFamily: 'Kalame',
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      labelText: "قیمت اجاره",
+                                      labelStyle: TextStyle(
+                                        fontSize: 15,
+                                        color: MyColor.gray,
+                                        decoration: TextDecoration.none,
+                                        fontFamily: 'Kalame',
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      floatingLabelAlignment:
+                                          FloatingLabelAlignment.start),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -522,22 +572,30 @@ class _VillayiState extends State<Villayi> {
                       ),
                     ),
                     SizedboxH(30),
-                    SizedBox(
-                      height: 54,
-                      width: 343,
-                      child: Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            color: MyColor.pink,
-                            borderRadius: BorderRadius.circular(7)),
-                        child: Text(
-                          "تکمیل ثبت نام",
-                          style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                              decoration: TextDecoration.none,
-                              fontFamily: 'Kalame',
-                              fontWeight: FontWeight.w700),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ImgScreen()));
+                      },
+                      child: SizedBox(
+                        height: 54,
+                        width: 343,
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: MyColor.pink,
+                              borderRadius: BorderRadius.circular(7)),
+                          child: Text(
+                            "تکمیل ثبت نام",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                decoration: TextDecoration.none,
+                                fontFamily: 'Kalame',
+                                fontWeight: FontWeight.w700),
+                          ),
                         ),
                       ),
                     ),

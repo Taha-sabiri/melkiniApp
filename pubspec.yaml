@@ -89,8 +89,8 @@ flutter:
     - family: Kalame
       fonts:
         - asset: assets/fonts/Kalameh-Black.ttf
-          weight: 700
-        - asset: assets/fonts/Kalameh-Medium.ttf
+          weight: 700 
+        - asset: assets/fonts/Kalameh-Regular.ttf
           weight: 500  
   #
   # For details regarding fonts from package dependencies,
